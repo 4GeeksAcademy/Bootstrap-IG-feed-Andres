@@ -3,183 +3,253 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 
-    <title>Instagram feed</title>
+  <title>Instagram feed</title>
 
 </head>
 
 <body>
 
-    <div class="container-fluid">
+  <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="https://www.instagram.com">Instagram</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse w-100" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item mx-2">
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                    New Post
-                    </button>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="btn btn-secondary dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-gear"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://www.instagram.com">Instagram</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse w-100" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-2">
+
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </nav>
 
-          <ul class="nav nav-tabs d-flex justify-content-center w-100" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
-                <i class="fa-solid fa-table-cells"></i>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                New Post
               </button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
-                <i class="fa-solid fa-square"></i>
-              </button>
+            <li class="nav-item dropdown">
+              <a class="btn btn-secondary dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gear"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
             </li>
           </ul>
+        </div>
+      </div>
+    </nav>
 
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <!--  Aquí va la vista de grilla-->
-                <div class="row align-items-center">
-                    <div class="col">
-                      <img src="https://humanidades.com/wp-content/uploads/2019/05/politica-1-e1589076411668.jpg" alt="guy in a suit, probably a politician" width="500" height="600"> 
-                    </div>
-                    <div class="col">
-                      <img src="https://www.camarero10.com/wp-content/uploads/2022/05/bartender-para-bares-y-restaurantes.jpg" alt="Bartender preparing a coctel" width="500" height="600"> 
-                    </div>
-                    <div class="col">
-                      <img src="https://cdn-prd.content.metamorphosis.com/wp-content/uploads/sites/2/2022/05/cat-hiding-main-768x512.jpg" alt="scared and hidden cat" width="500" height="600"> 
-                    </div>
-                  </div>
+    <ul class="nav nav-tabs d-flex justify-content-center w-100" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+          role="tab" aria-controls="home" aria-selected="true">
+          <i class="fa-solid fa-table-cells"></i>
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+          role="tab" aria-controls="profile" aria-selected="false">
+          <i class="fa-solid fa-square"></i>
+        </button>
+      </li>
+    </ul>
 
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <img src="https://www.gastronomiac.com/wp/wp-content/uploads/2022/01/Parilla2.jpg" alt="grilled meat" width="500" height="600"> 
-                    </div>
-                    <div class="col">
-                      <img src="https://news.northeastern.edu/wp-content/uploads/2016/10/writing_1400.jpg?resize=1100,733" alt="female hand writing with a pen" width="500" height="600"> 
-                    </div>
-                    <div class="col">
-                      <img src="https://warriorcollective.co.uk/cdn/shop/articles/BE-Web-1-scaled_11fe2721-f541-495b-a119-ecd622ba9e8b.jpg?v=1678906134&width=1100" alt="two athletes in a brazilian jiujitsu gi rolling" width="500" height="600"> 
-                    </div>
-                  </div>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <!--  Aquí va la vista de grilla-->
+        <div class="row align-items-center">
+          <div class="col">
+            <img src="https://humanidades.com/wp-content/uploads/2019/05/politica-1-e1589076411668.jpg"
+              alt="guy in a suit, probably a politician" width="100%" height="400px" object-fit="cover">
+          </div>
+          <div class="col">
+            <img src="https://www.camarero10.com/wp-content/uploads/2022/05/bartender-para-bares-y-restaurantes.jpg"
+              alt="Bartender preparing a coctel" width="100%" height="400px" object-fit="cover">
+          </div>
+          <div class="col">
+            <img
+              src="https://cdn-prd.content.metamorphosis.com/wp-content/uploads/sites/2/2022/05/cat-hiding-main-768x512.jpg"
+              alt="scared and hidden cat" width="100%" height="400px" object-fit="cover">
+          </div>
+        </div>
 
-                  <div class="row align-items-center">
-                    <div class="col">
-                      <img src="https://politikaucab.files.wordpress.com/2023/04/la-ucv-se-termino-convirtiendo-en-mi-otra-casa-al-pasar-todo-el-dia-en-sus-aulas-y-espacios.jpg?w=1024" alt="Central University of Venezuela" width="500" height="600"> 
-                    </div>
-                    <div class="col">
-                      <img src="https://static.sadhguru.org/d/46272/1633197086-1633197085450.jpg" alt="yoga shade" width="500" height="600"> 
-                    </div>
-                    <div class="col">
-                      <img src="https://digitalbluee.com/wp-content/uploads/2022/05/pexels-photo-4164418.jpeg" alt="visual studio code interface" width="500" height="600"> 
-                    </div>
-                  </div>
+        <div class="row align-items-center g-5">
+          <div class="col">
+            <img src="https://www.gastronomiac.com/wp/wp-content/uploads/2022/01/Parilla2.jpg" alt="grilled meat"
+              width="100%" height="400px" object-fit="cover">
+          </div>
+          <div class="col">
+            <img src="https://news.northeastern.edu/wp-content/uploads/2016/10/writing_1400.jpg?resize=1100,733"
+              alt="female hand writing with a pen" width="100%" height="400px" object-fit="cover">
+          </div>
+          <div class="col">
+            <img
+              src="https://warriorcollective.co.uk/cdn/shop/articles/BE-Web-1-scaled_11fe2721-f541-495b-a119-ecd622ba9e8b.jpg?v=1678906134&width=1100"
+              alt="two athletes in a brazilian jiujitsu gi rolling" width="100%" height="400px" object-fit="cover">
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col">
+            <img
+              src="https://politikaucab.files.wordpress.com/2023/04/la-ucv-se-termino-convirtiendo-en-mi-otra-casa-al-pasar-todo-el-dia-en-sus-aulas-y-espacios.jpg?w=1024"
+              alt="Central University of Venezuela" width="100%" height="400px" object-fit="cover">
+          </div>
+          <div class="col">
+            <img src="https://static.sadhguru.org/d/46272/1633197086-1633197085450.jpg" alt="yoga shade" width="100%"
+              height="400px" object-fit="cover">
+          </div>
+          <div class="col">
+            <img src="https://digitalbluee.com/wp-content/uploads/2022/05/pexels-photo-4164418.jpeg"
+              alt="visual studio code interface" width=width="100%" height="400px" object-fit="cover">
+          </div>
+        </div>
+
+      </div>
+      <div class="tab-pane fade d-flex flex-column mb-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <!--  Vista de Feed-->
+
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-4">
+
+              <div class="card d-flex justify-content-center" style="width: 18rem;">
+                <img src="https://humanidades.com/wp-content/uploads/2019/05/politica-1-e1589076411668.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="https://www.camarero10.com/wp-content/uploads/2022/05/bartender-para-bares-y-restaurantes.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img
+                  src="https://cdn-prd.content.metamorphosis.com/wp-content/uploads/sites/2/2022/05/cat-hiding-main-768x512.jpg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="https://www.gastronomiac.com/wp/wp-content/uploads/2022/01/Parilla2.jpg" class="card-img-top"
+                  alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="https://news.northeastern.edu/wp-content/uploads/2016/10/writing_1400.jpg?resize=1100,733"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img
+                  src="https://warriorcollective.co.uk/cdn/shop/articles/BE-Web-1-scaled_11fe2721-f541-495b-a119-ecd622ba9e8b.jpg?v=1678906134&width=1100"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img
+                  src="https://politikaucab.files.wordpress.com/2023/04/la-ucv-se-termino-convirtiendo-en-mi-otra-casa-al-pasar-todo-el-dia-en-sus-aulas-y-espacios.jpg?w=1024"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="https://static.sadhguru.org/d/46272/1633197086-1633197085450.jpg" class="card-img-top"
+                  alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="https://digitalbluee.com/wp-content/uploads/2022/05/pexels-photo-4164418.jpeg"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                </div>
+              </div>
 
             </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <!--  Vista de Feed-->
-
-                <div class="card" style="width: 18rem;">
-                  <img src="https://humanidades.com/wp-content/uploads/2019/05/politica-1-e1589076411668.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                  <img src="https://www.camarero10.com/wp-content/uploads/2022/05/bartender-para-bares-y-restaurantes.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                  <img src="https://cdn-prd.content.metamorphosis.com/wp-content/uploads/sites/2/2022/05/cat-hiding-main-768x512.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                  <img src="https://www.gastronomiac.com/wp/wp-content/uploads/2022/01/Parilla2.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                  <img src="https://news.northeastern.edu/wp-content/uploads/2016/10/writing_1400.jpg?resize=1100,733" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                  <img src="https://warriorcollective.co.uk/cdn/shop/articles/BE-Web-1-scaled_11fe2721-f541-495b-a119-ecd622ba9e8b.jpg?v=1678906134&width=1100" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                  <img src="https://politikaucab.files.wordpress.com/2023/04/la-ucv-se-termino-convirtiendo-en-mi-otra-casa-al-pasar-todo-el-dia-en-sus-aulas-y-espacios.jpg?w=1024" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                  <img src="https://static.sadhguru.org/d/46272/1633197086-1633197085450.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                  <img src="https://digitalbluee.com/wp-content/uploads/2022/05/pexels-photo-4164418.jpeg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-
-
-            </div>
+          </div>
         </div>
 
 
-
+      </div>
     </div>
-</div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
+  </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+    integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 
 </body>
