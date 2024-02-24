@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" type="text/css" href="styles.css">
 
+
   <title>Instagram feed</title>
 
 </head>
@@ -24,7 +25,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="https://www.instagram.com">Instagram</a>
+        <a class="navbar-brand" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i> Instagram</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -40,15 +41,22 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                      <h1 class="modal-title fs-5" id="exampleModalLabel"><strong>Create a new post</strong></h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+
                     <div class="modal-body">
-                      ...
+                        <h6><strong>Caption:</strong></h6>
+                        <div class="mb-3">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Add the caption of your post here"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-camera"></i></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-location-dot"></i></button>
                     </div>
+
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
+                      <button type="button" class="btn btn-success">Publish</button>
                     </div>
                   </div>
                 </div>
@@ -67,6 +75,7 @@
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
               </ul>
             </li>
           </ul>
@@ -92,16 +101,16 @@
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <!--  Aquí va la vista de grilla-->
-        <div class="row align-items-center">
-          <div class="col">
+        <div class="row justify-content-between align-items-center d-grip gap-3">
+          <div class="col p-3">
             <img src="https://humanidades.com/wp-content/uploads/2019/05/politica-1-e1589076411668.jpg"
               alt="guy in a suit, probably a politician" width="100%" height="400px" object-fit="cover">
           </div>
-          <div class="col">
+          <div class="col p-3">
             <img src="https://www.camarero10.com/wp-content/uploads/2022/05/bartender-para-bares-y-restaurantes.jpg"
               alt="Bartender preparing a coctel" width="100%" height="400px" object-fit="cover">
           </div>
-          <div class="col">
+          <div class="col p-3">
             <img
               src="https://cdn-prd.content.metamorphosis.com/wp-content/uploads/sites/2/2022/05/cat-hiding-main-768x512.jpg"
               alt="scared and hidden cat" width="100%" height="400px" object-fit="cover">
@@ -109,15 +118,15 @@
         </div>
 
         <div class="row align-items-center g-5">
-          <div class="col">
+          <div class="col p-3">
             <img src="https://www.gastronomiac.com/wp/wp-content/uploads/2022/01/Parilla2.jpg" alt="grilled meat"
               width="100%" height="400px" object-fit="cover">
           </div>
-          <div class="col">
+          <div class="col p-3">
             <img src="https://news.northeastern.edu/wp-content/uploads/2016/10/writing_1400.jpg?resize=1100,733"
               alt="female hand writing with a pen" width="100%" height="400px" object-fit="cover">
           </div>
-          <div class="col">
+          <div class="col p-3">
             <img
               src="https://warriorcollective.co.uk/cdn/shop/articles/BE-Web-1-scaled_11fe2721-f541-495b-a119-ecd622ba9e8b.jpg?v=1678906134&width=1100"
               alt="two athletes in a brazilian jiujitsu gi rolling" width="100%" height="400px" object-fit="cover">
@@ -125,18 +134,18 @@
         </div>
 
         <div class="row align-items-center">
-          <div class="col">
+          <div class="col p-3">
             <img
               src="https://politikaucab.files.wordpress.com/2023/04/la-ucv-se-termino-convirtiendo-en-mi-otra-casa-al-pasar-todo-el-dia-en-sus-aulas-y-espacios.jpg?w=1024"
               alt="Central University of Venezuela" width="100%" height="400px" object-fit="cover">
           </div>
-          <div class="col">
+          <div class="col p-3">
             <img src="https://static.sadhguru.org/d/46272/1633197086-1633197085450.jpg" alt="yoga shade" width="100%"
               height="400px" object-fit="cover">
           </div>
-          <div class="col">
+          <div class="col p-3">
             <img src="https://digitalbluee.com/wp-content/uploads/2022/05/pexels-photo-4164418.jpeg"
-              alt="visual studio code interface" width=width="100%" height="400px" object-fit="cover">
+              alt="visual studio code interface" width="100%" height="400px" object-fit="cover">
           </div>
         </div>
 
@@ -145,89 +154,122 @@
         <!--  Vista de Feed-->
 
         <div class="container-fluid">
-          <div class="row d-flex justify-content-center">
+          <div class="row d-flex justify-content-center mx-auto">
             <div class="col-md-4">
 
-              <div class="card d-flex justify-content-center" style="width: 18rem;">
+              <div class="card d-flex justify-content-center mb-5" style="width: 38rem;">
+                <div class="card-body">
+                  <p class="fw-light text-end fs-7">24/2</p>
+                  <h5>¿Qué es ser un buen político?</h5>
+                </div>              
                 <img src="https://humanidades.com/wp-content/uploads/2019/05/politica-1-e1589076411668.jpg"
                   class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
+                  <p class="card-text"><p><strong>35 likes</strong></p>Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
                 </div>
               </div>
 
-              <div class="card" style="width: 18rem;">
+              <div class="card card d-flex justify-content-center mb-5" style="width: 38rem;">
+                <div class="card-body">
+                  <p class="fw-light text-end fs-7">14/1</p>
+                  <h5>Coctelería sin morir en el intento</h5>
+                </div>  
                 <img src="https://www.camarero10.com/wp-content/uploads/2022/05/bartender-para-bares-y-restaurantes.jpg"
                   class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  <p class="card-text"><p><strong>793 likes</strong></p>Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
                 </div>
               </div>
 
-              <div class="card" style="width: 18rem;">
-                <img
-                  src="https://cdn-prd.content.metamorphosis.com/wp-content/uploads/sites/2/2022/05/cat-hiding-main-768x512.jpg"
+              <div class="card d-flex justify-content-center mb-5" style="width: 38rem;">
+                <div class="card-body">
+                  <p class="fw-light text-end fs-7">23/1</p>
+                  <h5>Hoy mi gato se escondió de la visita</h5>
+                </div>  
+                <img src="https://cdn-prd.content.metamorphosis.com/wp-content/uploads/sites/2/2022/05/cat-hiding-main-768x512.jpg"
                   class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  <p class="card-text"><p><strong>2 likes</strong></p>Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
                 </div>
               </div>
 
-              <div class="card" style="width: 18rem;">
+              <div class="card d-flex justify-content-center mb-5" style="width: 38rem;">
+                <div class="card-body">
+                  <p class="fw-light text-end fs-7">26/12</p>
+                  <h5>¿Parrilla o asado? El choque cultural entre el norte y el sur</h5>
+                </div>  
                 <img src="https://www.gastronomiac.com/wp/wp-content/uploads/2022/01/Parilla2.jpg" class="card-img-top"
                   alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  <p class="card-text"><p><strong>53 likes</strong></p>Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
                 </div>
               </div>
 
-              <div class="card" style="width: 18rem;">
+              <div class="card d-flex justify-content-center mb-5" style="width: 38rem;">
+                <div class="card-body">
+                  <p class="fw-light text-end fs-7">02/10</p>
+                  <h5>Active recalling o cómo estudiar de verdad</h5>
+                </div>
                 <img src="https://news.northeastern.edu/wp-content/uploads/2016/10/writing_1400.jpg?resize=1100,733"
                   class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  <p class="card-text"><p><strong>30000 likes</strong></p>Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
                 </div>
               </div>
 
-              <div class="card" style="width: 18rem;">
-                <img
-                  src="https://warriorcollective.co.uk/cdn/shop/articles/BE-Web-1-scaled_11fe2721-f541-495b-a119-ecd622ba9e8b.jpg?v=1678906134&width=1100"
+              <div class="card d-flex justify-content-center mb-5" style="width: 38rem;">
+                <div class="card-body">
+                  <p class="fw-light text-end fs-7">30/5</p>
+                  <h5>BJJ para principiantes en gi</h5>
+                </div>
+                <img src="https://warriorcollective.co.uk/cdn/shop/articles/BE-Web-1-scaled_11fe2721-f541-495b-a119-ecd622ba9e8b.jpg?v=1678906134&width=1100"
                   class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  <p class="card-text"><p><strong>501 likes</strong></p>Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
                 </div>
               </div>
 
-              <div class="card" style="width: 18rem;">
-                <img
-                  src="https://politikaucab.files.wordpress.com/2023/04/la-ucv-se-termino-convirtiendo-en-mi-otra-casa-al-pasar-todo-el-dia-en-sus-aulas-y-espacios.jpg?w=1024"
+              <div class="card d-flex justify-content-center mb-5" style="width: 38rem;">
+                <div class="card-body">
+                  <p class="fw-light text-end fs-7">3/23</p>
+                  <h5>Magna UCV</h5>
+                </div>
+                <img src="https://politikaucab.files.wordpress.com/2023/04/la-ucv-se-termino-convirtiendo-en-mi-otra-casa-al-pasar-todo-el-dia-en-sus-aulas-y-espacios.jpg?w=1024"
                   class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  <p class="card-text"><p><strong>2867 likes</strong></p>Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
                 </div>
               </div>
 
-              <div class="card" style="width: 18rem;">
+              <div class="card d-flex justify-content-center mb-5" style="width: 38rem;">
+                <div class="card-body">
+                  <p class="fw-light text-end fs-7">4/3</p>
+                  <h5>Meditación, salud y tranquilidad</h5>
+                </div>
                 <img src="https://static.sadhguru.org/d/46272/1633197086-1633197085450.jpg" class="card-img-top"
                   alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  <p class="card-text"><p><strong>147 likes</strong></p>Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
                 </div>
               </div>
 
-              <div class="card" style="width: 18rem;">
+              <div class="card d-flex justify-content-center mb-5" style="width: 38rem;">
+                <div class="card-body">
+                  <p class="fw-light text-end fs-7">1/23</p>
+                  <h5>VS Code besto los demás editores</h5>
+                </div>
                 <img src="https://digitalbluee.com/wp-content/uploads/2022/05/pexels-photo-4164418.jpeg"
                   class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  <p class="card-text"><p><strong>3503 likes</strong></p>Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
                 </div>
               </div>
